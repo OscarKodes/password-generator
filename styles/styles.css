@@ -1,0 +1,8 @@
+.generate-btn {
+  border: 1px grey solid;
+  border-radius: 2rem;
+  padding: 1rem 1.5rem;
+  width: 4rem;
+  text-align: center;
+  margin: 0 auto;
+}
