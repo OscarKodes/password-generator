@@ -5,27 +5,66 @@
 
     <!-- Local CSS -->
     <link rel="stylesheet" href="styles/styles.css">
-    <title>Password Generator</title>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <title>Pokemon Password Generator</title>
   </head>
   <body>
     <h1>Password Generator</h1>
-    <div class="pokemon-btn generate-btn">
-      Generate Pokemon
-    </div>
-    <div class="adj-btn generate-btn">
-      Generate Adjective
-    </div>
-    <p class="pokemon-display">Generated Pokemon Here</p>
-    <p class="adj-display">Generated Adj Here</p>
 
-    <ul>
-      <p>Things to do</p>
-      <li>Memorable Pokemon based password generator</li>
-      <li>add nouns Ex: "BigPikachuCar"</li>
-      <li>add color Ex: "NearbyGreenRaticateCard"</li>
-      <li></li>
-      <li></li>
+    <div class="main-app">
+      <p class="password">
+        <span class="adj-display pass-part">Adj</span>
+        <span class="pokemon-display pass-part">Pokemon</span>
+        <span class="noun-display pass-part">Noun</span>
+      </p>
+      <div class="generate-btn">
+        Generate Password Combo
+      </div>
+    </div>
+
+  <div class="about">
+    <h2 class="about-question">What?</h2>
+    <p class="what-answer">
+      This a random generator creates passwords in a Adjective-Pokemon-Noun format.
+    </p>
+    <h2 class="about-question">Why?</h2>
+    <ul class="why-list">
+      <li>
+        Longer passwords are typically safer.
+      </li>
+      <li>
+        Passwords that can be visualized tend to be easier to remember.
+      </li>
+      <li>
+        Thinking up passwords can be difficult sometimes.
+      </li>
     </ul>
+    <strong class="no-save">None of these passwords are saved. They are randomly generated.</strong>
+  </div>
+
+  <div class="api-credit">
+    <em>PokeAPI and DataMuse APIs were used in the generation of individual terms.</em>
+  </div>
+
+
+    <div class="footer">
+      <p>Website by
+        <a href="https://oscarkodes.work/">
+          <em>Oscar Ko</em>
+        </a>
+      </p>
+      <p>
+        <a href="https://github.com/OscarKodes">
+          <i class="fab fa-github fa-3x"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/oscar-ko/">
+          <i class="fab fa-linkedin fa-3x"></i>
+        </a>
+      </p>
+    </div>
   </body>
   <footer>
     <script src="index.js" charset="utf-8"></script>
