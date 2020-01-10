@@ -1,28 +1,27 @@
 // DECLARE SELECTORS ================================
 const pokemonDisplay = document.querySelector(".pokemon-display");
-const pokemonBtn = document.querySelector(".pokemon-btn");
 const adjDisplay = document.querySelector(".adj-display");
-const adjBtn = document.querySelector(".adj-btn");
-
-
-// DECLARE HTTP GET REQUEST =========================
-
-
-
+const nounDisplay = document.querySelector(".noun-display");
+const generateBtn = document.querySelector(".generate-btn");
 
 // Declare Listeners =====================
-pokemonBtn.addEventListener("click", () => {
+generateBtn.addEventListener("click", () => {
+  generatePokemon();
+  generateAdj();
+  generateNoun();
+});
 
-  // passwordDisplay.innerText = "Clicked";
+// API HTTP REQUEST Helper Functions =========================
+const generatePokemon = () => {
   let randomNum = Math.ceil(Math.random() * 150 + 1);
 
-  var request = new XMLHttpRequest()
+  let request = new XMLHttpRequest()
   let url = 'https://pokeapi.co/api/v2/pokemon/' + randomNum;
 
   request.open('GET', url, true)
   request.onload = function() {
     // Begin accessing JSON data here
-    var data = JSON.parse(this.response)
+    let data = JSON.parse(this.response)
 
     if (request.status >= 200 && request.status < 400) {
       pokemonDisplay.innerText = data.species.name;
@@ -31,22 +30,19 @@ pokemonBtn.addEventListener("click", () => {
     }
   }
   request.send();
-});
+}
 
-
-// Declare Listeners =====================
-adjBtn.addEventListener("click", () => {
-
-  var request = new XMLHttpRequest()
+const generateAdj = () => {
+  let request = new XMLHttpRequest()
   let randomLength = Math.ceil(Math.random() * 25 + 1);
-  let wordArr = ["tree", "car", "sushi", "bird", "fire"];
+  let wordArr = ["love", "car", "sushi", "bird", "fire"];
   let randomWord = wordArr[Math.floor(Math.random() * 5)];
   let url = 'https://api.datamuse.com/words?rel_jjb=' + randomWord +'&max=' + randomLength;
 
   request.open('GET', url, true)
   request.onload = function() {
     // Begin accessing JSON data here
-    var data = JSON.parse(this.response)
+    let data = JSON.parse(this.response)
 
     if (request.status >= 200 && request.status < 400) {
       adjDisplay.innerText = data.reverse()[0].word;
@@ -55,4 +51,25 @@ adjBtn.addEventListener("click", () => {
     }
   }
   request.send();
-});
+}
+
+const generateNoun = () => {
+  let request = new XMLHttpRequest()
+  let randomLength = Math.ceil(Math.random() * 25 + 1);
+  let wordArr = ["blue", "red", "yellow", "green", "orange", "purple"];
+  let randomWord = wordArr[Math.floor(Math.random() * 6)];
+  let url = 'https://api.datamuse.com/words?rel_jja=' + randomWord +'&max=' + randomLength;
+
+  request.open('GET', url, true)
+  request.onload = function() {
+    // Begin accessing JSON data here
+    let data = JSON.parse(this.response)
+
+    if (request.status >= 200 && request.status < 400) {
+      nounDisplay.innerText = data.reverse()[0].word;
+    } else {
+      console.log('error')
+    }
+  }
+  request.send();
+}
