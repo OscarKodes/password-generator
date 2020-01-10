@@ -1,8 +1,53 @@
+body {
+  margin: 0;
+}
+
+.main-app {
+  border: 1px black solid;
+  text-align: center;
+}
+
+.password {
+  display: inline-block;
+}
+
 .generate-btn {
+  display: inline-block;
   border: 1px grey solid;
   border-radius: 2rem;
   padding: 1rem 1.5rem;
   width: 4rem;
+}
+
+.pass-part {
+  text-transform: capitalize;
+}
+
+.about {
+  border: 1px black solid;
+  width: 70%;
+  margin: 3rem auto;
+  line-height: 1.5;
+}
+
+.footer {
   text-align: center;
-  margin: 0 auto;
+  margin: 3rem 0 0;
+  background-color: lavender;
+  padding: 3rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: grey;
+}
+
+.footer a i {
+  color: #555;
+  margin: 0 .5rem;
+}
+
+.footer a:hover,
+.footer a i:hover {
+  color: #000
 }
