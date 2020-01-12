@@ -13,7 +13,7 @@ generateBtn.addEventListener("click", () => {
 
 // API HTTP REQUEST Helper Functions =========================
 const generatePokemon = () => {
-  let randomNum = Math.ceil(Math.random() * 150 + 1);
+  let randomNum = Math.ceil(Math.random() * 806 + 1);
 
   let request = new XMLHttpRequest()
   let url = 'https://pokeapi.co/api/v2/pokemon/' + randomNum;
@@ -35,7 +35,7 @@ const generatePokemon = () => {
 const generateAdj = () => {
   let request = new XMLHttpRequest()
   let randomLength = Math.ceil(Math.random() * 25 + 1);
-  let wordArr = ["love", "car", "sushi", "bird", "fire"];
+  let wordArr = ["love", "car", "sushi", "bottle", "paint"];
   let randomWord = wordArr[Math.floor(Math.random() * 5)];
   let url = 'https://api.datamuse.com/words?rel_jjb=' + randomWord +'&max=' + randomLength;
 
@@ -56,7 +56,7 @@ const generateAdj = () => {
 const generateNoun = () => {
   let request = new XMLHttpRequest()
   let randomLength = Math.ceil(Math.random() * 25 + 1);
-  let wordArr = ["blue", "red", "yellow", "green", "orange", "purple"];
+  let wordArr = ["black", "stolen", "white", "salty", "liquid", "vegetarian"];
   let randomWord = wordArr[Math.floor(Math.random() * 6)];
   let url = 'https://api.datamuse.com/words?rel_jja=' + randomWord +'&max=' + randomLength;
 
