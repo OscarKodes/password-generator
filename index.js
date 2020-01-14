@@ -35,7 +35,7 @@ const generatePokemon = () => {
 const generateAdj = () => {
   let request = new XMLHttpRequest()
   let randomLength = Math.ceil(Math.random() * 25 + 1);
-  let wordArr = ["love", "car", "sushi", "bottle", "paint"];
+  let wordArr = ["love", "car", "sushi", "man", "paint"];
   let randomWord = wordArr[Math.floor(Math.random() * 5)];
   let url = 'https://api.datamuse.com/words?rel_jjb=' + randomWord +'&max=' + randomLength;
 

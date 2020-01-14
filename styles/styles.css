@@ -1,11 +1,23 @@
 body {
   margin: 0;
-  font-size: 32px;
+  font-size: 28px;
+  font-family: 'Open Sans', sans-serif;
+  background-color: skyblue;
+}
+
+@media only screen and (min-width: 1080px) {
+  body {
+    font-size: 16px;
+    background-color: gold;
+  }
 }
 
 .big-text {
-  font-size: 3.5rem;
+  font-size: 5rem;
   text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  margin: 7rem 0 2.5rem;
 }
 
 .main-app {
@@ -18,8 +30,8 @@ body {
   border: 1px grey solid;
   border-radius: 2rem;
   padding: 1rem 0;
-  width: 80%;
-  font-size: 3rem;
+  width: 95%;
+  font-size: 4.3rem;
   vertical-align: middle;
   box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
   background-color: white;
@@ -32,19 +44,19 @@ body {
 .generate-btn {
   border: 1px grey solid;
   border-radius: .3rem;
-  width: 10rem;
+  width: 20rem;
   padding: 1rem;
-  margin: 0 auto;
+  margin: 2rem auto 4rem;
   vertical-align: middle;
   background-color: #4f7549;
   color: white;
-  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
-  font-size: 2rem;
+  box-shadow: 0 .25rem .5rem rgba(0,0,0,.3);
+  font-size: 3.5rem;
 }
 
 .generate-btn:hover {
   background-color: #6ea365;
-  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
   cursor: pointer;
   transform: scale(1.1);
 }
@@ -72,6 +84,8 @@ body {
 
 .question {
   text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
 }
 
 .answer {
